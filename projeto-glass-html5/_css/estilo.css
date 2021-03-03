@@ -1,0 +1,245 @@
+@charset "UTF-8";
+
+/*formas de definir fonte*/    
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Titillium+Web&display=swap');
+@font-face {
+    font-family: 'FonteLogo';
+    src: url(../_fonts/Roboto-Regular.ttf);
+} 
+
+body {
+    background-color: rgb(211,211,211);
+    font-family: calibri, sans-serif;
+
+}
+
+div#interface { /*'#' separa id's*/
+    width: 1000px;
+    background-color: white;
+    margin: -20px auto 0px auto; /*ordem da margem:↑ → ↓ ← */
+    box-shadow: 0px 0px 10px grey; /*sombra: deslocamento horiz(dir), deslocamento ver, blur, cor */
+    padding: 10px;
+}
+
+p {
+    text-align: justify; 
+    text-indent: 50px;
+}
+
+a {
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+header#cabecalho img#icone {
+    position:absolute;
+    left: 1000px;
+    top:50px;
+}
+
+header#cabecalho {
+    border-bottom: 2px #606060 solid;  /* delimitando  cabeçalho com uma linha na borda inferior de 1px cinza */
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 100px; /* após o url, pode-se definir parametros para o bg (não repetir img, 0px de desl horiz, 100px de desl vert */
+}
+
+header#cabecalho h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size:15pt;
+    color: #888888;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+/* formatação de imagens com legendas */
+
+figure.foto-legenda { /* '.' separa classes */
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+}
+
+figure.foto-legenda img {
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption {
+    opacity: 0;
+    position: absolute;
+    top:0px;
+    background-color: rgba(0, 0, 0, 0.404); /*4º elemento (alfa) define a transparencia da cor */
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding: 10px; /* espansão da área ao redor da parte de dentro elemento */
+    box-sizing: border-box;
+    transition: opacity 1s; /* aparece a legenda com uma transição de 1s na opacidade*/
+}
+
+figure.foto-legenda:hover figcaption {
+    opacity: 1; /* ao passar o cursor na imagem, a legenda aparece com certa opacidade */
+} 
+
+/* Formatação do Menu */
+nav#menu {
+    display: block;  /* para que o menu vire um 'bloco' só e possa para subir p topo da pagina*/
+
+}
+
+nav#menu ul {
+    list-style: none;
+    text-transform:uppercase;
+    position: absolute;
+    top: -20px;
+    left: 600px;
+}
+
+nav#menu li {
+    display: inline-block;
+    background-color: lightgrey;
+    padding: 10px;
+    margin: 5px;
+    transition: background-color 0.5s; /* aparecem os links com uma transição de 0.5s na cor*/
+}
+
+nav#menu li:hover {
+    background-color: grey;  
+}  /* ao passar o cursor nos links, eles ficam com a cor indicada */
+
+nav#menu h1 {
+    display: none;   /* ocultar o h1 do visual da página */
+}
+
+nav#menu a {
+    color:#000000;
+    text-decoration: none;
+}
+
+nav#menu a:hover {
+    color: #ffffff;
+}
+
+section#corpo {
+    display: block; /*deve virar bloco pq float só funciona em bloco*/
+    width: 500px;
+    float: left;  /*float para conteudo ser movido na direção indicada*/
+    border-right: 2px #606060 solid;
+    padding-right: 20px;
+    padding-left: 5px;
+    font-size: 14pt;
+}
+
+article#noticia-principal h2 {
+    font-size: 14pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+}
+
+header#cabecalho-artigo h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho-artigo h2 {
+    font-size:15pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px
+}
+
+header#cabecalho-artigo h3 { 
+    font-size: 12pt;
+    color: #606060;
+}
+
+.direita {
+    text-align: right;
+}
+/* Formatação da tabela*/
+table#tabelaspec {
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin: auto;
+}
+
+table#tabelaspec td {
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table#tabelaspec td.ce {
+color: #ffffff;
+background-color: #888888;
+vertical-align: top;
+font-weight: bold;
+}
+
+table#tabelaspec td.cd {
+background-color:#f5f5f5;
+}
+
+table#tabelaspec caption { /*editação do titulo da tabela*/
+    color: #888888;
+    font-size: 15pt;
+    font-weight: bolder;
+}
+
+table#tabelaspec caption span { /*editação do titulo da tabela || caption e span não tem . eparando, pois são tags diferentes */
+    display: block; 
+    float: right;
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+aside#lateral {
+    display: block;
+    width: 450px;
+    float: right;
+    padding: 5px;
+    font-size: 14pt;
+    margin-top: 15px;
+    background-color: #e5e5e5;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.404);
+}
+
+aside#lateral h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+
+}
+
+aside#lateral h2{
+    background-color: #606060;
+    font-size: 15pt;
+    color: #ffffff;
+    padding: 5px 
+}
+
+footer#rodape {
+    clear: both; /*usado para "limpar" a divisão da pagina e voltar a ser um campo só a partir do footer*/
+    border-top: 2px solid #606060;
+}
+footer#rodape p {
+    text-align: center;
+}

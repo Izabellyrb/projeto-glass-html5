@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+form {  /*para deixar o formulario todo centralizado e ocupar esse tamanho max*/ 
+    width: 500px;
+    margin: auto;
+}
+
+input, textarea { /*tudo q for pra por info, vai ter essa formatação*/
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 13pt;
+    background-color: rgba(255,255,255,0.8); /*pra que o fundo não prejudique a visu dos dados*/
+}
+
+input:hover, textarea:hover { /*quando cursor se prox de onde poe info, troca de cor*/
+    background-color: #dddddd;
+}
+
+legend { /*titulos das caixas de info*/
+    color: #888888;
+    font-weight: bold;
+    font-size: 13pt;
+    font-family: sans-serif;
+}
+
+fieldset { /*caixas de info*/
+    border-color: #cecece;
+    margin: 20px;
+}
+
+fieldset#sexo { /* caixa um pouco menor*/
+    width: 110px;
+    margin-left: 50px;
+}
+
+fieldset#mensagem textarea{ /* caixa um pouco menor*/
+    margin-left: 50px;
+}
+
+/*plano de fundo de cada caixa*/
+fieldset#usuario { 
+    background: url("../_imagens/icone-contato.png") no-repeat 50% 50%; /*% para posicionar img*/
+}
+
+fieldset#endereco {
+    background: url("../_imagens/icone-endereco.png") no-repeat 50% 50%;    
+}
+
+fieldset#mensagem {
+    background: url("../_imagens/icone-mensagem.png") no-repeat 50% 50%; 
+}
+
+fieldset#pedido {
+    background: url("../_imagens/icone-pagamento.png") no-repeat 50% 50%;    
+}
+
+input#enviar {
+    margin-left: 180px
+}
